@@ -23,6 +23,18 @@
         main {
             flex: 1 0 auto;
         }
+
+        .detalhes_lista:hover .celula {
+            background: rgba(0, 169, 161, 0.3);
+        }
+
+        .editar:hover {
+            background: rgba(46, 204, 113, .7);
+        }
+
+        .email:hover {
+            background: rgba(52, 152, 219,.9);
+        }
     </style>
 </head>
 
@@ -44,58 +56,49 @@
         <a class="waves-effect waves-light btn" onclick="history.go(-1);"
             style="background: #34a5a1; color: white; margin: 1em;"><i class="fas fa-arrow-left"></i> Voltar</a>
     </div>
-
+    <h4 class="center"> Interesados em adotar </h4>
     <main>
-
+        <form class="right col s12">
+            <div class="row">
+                <div class="input-field  m6 col s6">
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Pesquisar...</label>
+                </div>
+                <div class="input-field  m6 col s6">
+                        <a class="waves-effect waves-light btn" id="pesquisar"><i class="fas fa-search"></i></a>
+                </div>
+            </div>
+        </form>
         <div class="home">
-            <h4 class="center"> Cadastro de pessoa </h4>
-            <br>
+
             <div class="row container">
 
                 <div class="row">
-                    <form class="col s12">
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Nome</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Sobrenome</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">E-mail</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Telefone</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Cidade</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Endereço</label>
-                            </div>
-                        </div>
-
-                        <div class="input-field col m12 s12">
-                            <p class="center"><a class="waves-effect waves-light btn green darken-3 editar" id="editar"
-                                    style="color: #fff;"><i class="fas fa-check"></i> Cadastrar </a></p>
-                        </div>
-
-                    </form>
+                    <table class="striped responsive-table">
+                        <thead style="background: #34a5a1;">
+                            <tr>
+                                <th class="center">Nome</th>
+                                <th class="center">Cidade</th>
+                                <th class="center">Estado</th>
+                                <th class="center">Telefone</th>
+                                <th class="center">Enviar E-mail</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="detalhes_lista">
+                                <td class=" center celula">Pedro</td>
+                                <td class=" center celula">Diamantina</td>
+                                <td class=" center celula">MG</td>
+                                <td class=" center celula">(33) 9 9065-2355</td>
+                                <td class=" center center email"><i class="fas fa-envelope fa-2x"></i></td>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
         </div>
-
     </main>
 
     <footer class="page-footer" style="background: rgba(52, 73, 94,.8);">
@@ -103,7 +106,6 @@
             <p class="center">@copyright Adocão 2019</p>
         </div>
     </footer>
-
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="../Public/js/materialize.js"></script>
     <script src="../Public/js/init.js"></script>
