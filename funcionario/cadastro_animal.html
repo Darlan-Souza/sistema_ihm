@@ -1,17 +1,12 @@
-<?php
- include("header.php");
- include("nav.php");
- ?>
 <main>
+    <div class="home">
+        <br>
+        <h4 class="center"> Gestão </h4>
+        <br>
+        <div class="row container">
 
-<div class="section no-pad-bot" id="index-banner">
-    <br>
-    <div class="container">
-        <h1>TESTE CIDADAO</h1>
-    </div>
-    <?php echo($_SERVER['DOCUMENT_ROOT']."/sistema_ihm"); ?>
-    <div class="col m6 s12 tooltipped" data-position="top" data-delay="100" data-tooltip="Gerenciar cadastros">
-                <a href="#">
+            <div class="col m6 s12 tooltipped" data-position="top" data-delay="100" data-tooltip="Gerenciar cadastros">
+                <a href="funcionario/cadastro_animal.php">
                     <div class="card-panel area-psicologo center">
                         <i class="fas fa-plus fa-5x" aria-hidden="true"></i>
                         <h5>Cadastros</h5>
@@ -45,8 +40,7 @@
                     </div>
                 </a>
             </div>
-</div>
+        </div>
+    </div>
+
 </main>
-<?php
-include("footer.php");
-?>
