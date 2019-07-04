@@ -19,6 +19,7 @@
             min-height: 100vh;
             flex-direction: column;
         }
+
         main {
             flex: 1 0 auto;
         }
@@ -28,7 +29,8 @@
 <body>
     <nav class="nav-extended" style="background: rgba(22, 160, 133,1); height: 7em;">
         <div class="nav-wrapper container">
-            <a href="../index.html" class="brand-logo" style="margin-top:-15px;"><img src="../Public/img/LogoIHC1.png"></a>
+            <a href="../index.html" class="brand-logo" style="margin-top:-15px;"><img
+                    src="../Public/img/LogoIHC1.png"></a>
             <div class="right">
                 <ul class="tabs-transparent" style="margin-top: 2em;">
                     <li class="tab"><a href="home.php" style="font-size:2em;">Cidadão</a></li>
@@ -37,6 +39,12 @@
             </div>
         </div>
     </nav>
+    <br>
+    <div class="col m12 s12">
+        <a class="waves-effect waves-light btn" onclick="history.go(-1);"
+            style="background: #34a5a1; color: white; margin: 1em;"><i class="fas fa-arrow-left"></i> Voltar</a>
+    </div>
+
     <main>
 
         <div class="home">
@@ -79,8 +87,9 @@
                         </div>
 
                         <div class="input-field col m12 s12">
-                            <p class="center"><a class="waves-effect waves-light btn green darken-3 editar" id="editar" style="color: #fff;"><i class="fas fa-check"></i> Cadastrar </a></p>
-                          </div>
+                            <p class="center"><a class="waves-effect waves-light btn green darken-3 editar" id="editar"
+                                    style="color: #fff;"><i class="fas fa-check"></i> Cadastrar </a></p>
+                        </div>
 
                     </form>
                 </div>

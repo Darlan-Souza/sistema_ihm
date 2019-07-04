@@ -19,6 +19,7 @@
             min-height: 100vh;
             flex-direction: column;
         }
+
         main {
             flex: 1 0 auto;
         }
@@ -28,7 +29,8 @@
 <body>
     <nav class="nav-extended" style="background: rgba(22, 160, 133,1); height: 7em;">
         <div class="nav-wrapper container">
-            <a href="../index.html" class="brand-logo" style="margin-top:-15px;"><img src="../Public/img/LogoIHC1.png"></a>
+            <a href="../index.html" class="brand-logo" style="margin-top:-15px;"><img
+                    src="../Public/img/LogoIHC1.png"></a>
             <div class="right">
                 <ul class="tabs-transparent" style="margin-top: 2em;">
                     <li class="tab"><a href="home.php" style="font-size:2em;">Cidadão</a></li>
@@ -38,6 +40,12 @@
         </div>
     </nav>
     <main>
+        <br>
+
+        <div class="col m12 s12">
+            <a class="waves-effect waves-light btn" onclick="history.go(-1);"
+                style="background: #34a5a1; color: white; margin: 1em;"><i class="fas fa-arrow-left"></i> Voltar</a>
+        </div>
 
         <div class="home">
             <br>
@@ -50,39 +58,48 @@
                         <div class="row">
                             <div class="input-field col s6">
                                 <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Nome</label>
+                                <label for="last_name">Raça</label>
                             </div>
                             <div class="input-field col s6">
                                 <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Sobrenome</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">E-mail</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Telefone</label>
+                                <label for="last_name">Peso</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s6">
                                 <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Cidade</label>
+                                <label for="last_name">Cor</label>
                             </div>
                             <div class="input-field col s6">
                                 <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Endereço</label>
+                                <label for="last_name">Idade</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col m6 s12">
+                                <select name="tipo_produto" id="tipo_produto">
+                                    <option value="0" selected>Não</option>
+                                    <option value="2">Sim</option>
+                                </select>
+                                <label>Castrado</label>
+                            </div>
+                            <div class="input-field col m6 s12">
+                                <select name="tipo_produto" id="tipo_produto">
+                                    <option value="0" selected>Pequeno</option>
+                                    <option value="1">Medio</option>
+                                    <option value="2">Grande</option>
+                                </select>
+                                <label>Porte do animal</label>
                             </div>
                         </div>
 
                         <div class="input-field col m12 s12">
-                            <p class="center"><a class="waves-effect waves-light btn green darken-3 editar" id="editar" style="color: #fff;"><i class="fas fa-check"></i> Cadastrar </a></p>
-                          </div>
+                            <p class="center"><a class="waves-effect waves-light btn green darken-3 editar" id="editar"
+                                    style="color: #fff;"><i class="fas fa-check"></i> Cadastrar </a></p>
+                        </div>
 
                     </form>
+
                 </div>
             </div>
         </div>
@@ -102,3 +119,12 @@
 </body>
 
 </html>
+
+<script>
+
+    window.onload = function () {
+        $(document).ready(function () {
+            $('select').material_select();
+        });
+    }
+</script>
