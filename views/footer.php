@@ -4,7 +4,9 @@
     </div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 <script src="../Public/js/materialize.js"></script>
 <script src="../Public/js/init.js"></script>
 </body>
+</html>

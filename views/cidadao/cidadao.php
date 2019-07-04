@@ -9,6 +9,7 @@
     <div class="container">
         <h1>TESTE CIDADAO</h1>
     </div>
+    <?php echo($_SERVER['DOCUMENT_ROOT']."/sistema_ihm"); ?>
     <div class="col m6 s12 tooltipped" data-position="top" data-delay="100" data-tooltip="Gerenciar cadastros">
                 <a href="#">
                     <div class="card-panel area-psicologo center">
