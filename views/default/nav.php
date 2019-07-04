@@ -2,7 +2,7 @@
     <div class="nav-wrapper container">
         <a href="#" class="brand-logo"><img src="Public/img/LogoIHM.png"></a>
         <div class="right">
-            <ul class="tabs tabs-transparent" style="margin-top: 2em;">
+            <ul>
                 <li class="tab"><a href="views/home.php">Cidadão</a></li>
                 <li class="tab"><a href="views/funcionario.php">Funcionário</a></li>
             </ul>
