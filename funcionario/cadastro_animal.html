@@ -1,46 +1,104 @@
-<main>
-    <div class="home">
-        <br>
-        <h4 class="center"> Gestão </h4>
-        <br>
-        <div class="row container">
+<!DOCTYPE html>
+<html lang="pt-br">
 
-            <div class="col m6 s12 tooltipped" data-position="top" data-delay="100" data-tooltip="Gerenciar cadastros">
-                <a href="funcionario/cadastro_animal.php">
-                    <div class="card-panel area-psicologo center">
-                        <i class="fas fa-plus fa-5x" aria-hidden="true"></i>
-                        <h5>Cadastros</h5>
-                    </div>
-                </a>
-            </div>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>ADOCÃO</title>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../Public/css/materialize.min.css" media="screen,projection" />
+    <link href="../Public/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../Public/css/somesystem.css" rel="stylesheet">
+    <link href="../Public/css/toastr.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        main {
+            flex: 1 0 auto;
+        }
+    </style>
+</head>
 
-            <div class="col m6 s12 tooltipped" data-position="top" data-delay="100" data-tooltip="Localizar animais perdidos">
-                <a href="#">
-                    <div class="card-panel area-psicologo center">
-                        <i class="fas fa-map-marker-alt fa-5x" aria-hidden="true"></i>
-                        <h5>Localizar animal</h5>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col m6 s12 tooltipped" data-position="top" data-delay="100" data-tooltip="Identificar interesados em adoção">
-                <a href="#">
-                    <div class="card-panel area-psicologo center">
-                        <i class="fas fa-eye fa-5x" aria-hidden="true"></i>
-                        <h5>Ver interasados em adoção</h5>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col m6 s12 tooltipped" data-position="top" data-delay="100" data-tooltip="Gestão de funcionários">
-                <a href="#">
-                    <div class="card-panel area-psicologo center">
-                        <i class="fas fa-users fa-5x" aria-hidden="true"></i>
-                        <h5>Gestão de funcionários</h5>
-                    </div>
-                </a>
+<body>
+    <nav class="nav-extended" style="background: rgba(22, 160, 133,1); height: 7em;">
+        <div class="nav-wrapper container">
+            <a href="../index.html" class="brand-logo" style="margin-top:-15px;"><img src="../Public/img/LogoIHC1.png"></a>
+            <div class="right">
+                <ul class="tabs-transparent" style="margin-top: 2em;">
+                    <li class="tab"><a href="home.php" style="font-size:2em;">Cidadão</a></li>
+                    <li class="tab"><a href="funcionario/funcionario.php" style="font-size:2em;">Funcionário</a></li>
+                </ul>
             </div>
         </div>
-    </div>
+    </nav>
+    <main>
 
-</main>
+        <div class="home">
+            <br>
+            <h4 class="center"> Cadastro de animais </h4>
+            <br>
+            <div class="row container">
+
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Nome</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Sobrenome</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">E-mail</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Telefone</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Cidade</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Endereço</label>
+                            </div>
+                        </div>
+
+                        <div class="input-field col m12 s12">
+                            <p class="center"><a class="waves-effect waves-light btn green darken-3 editar" id="editar" style="color: #fff;"><i class="fas fa-check"></i> Cadastrar </a></p>
+                          </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </main>
+
+    <footer class="page-footer" style="background: rgba(52, 73, 94,.8);">
+        <div class="container">
+            <p class="center">@copyright Adocão 2019</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../Public/js/materialize.js"></script>
+    <script src="../Public/js/init.js"></script>
+</body>
+
+</html>
