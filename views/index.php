@@ -1,8 +1,6 @@
-
 <?php
-    include("default/header.html");
-    include("default/nav.html");
-    include("home.html");
-    
-    include("default/footer.html");
+    include("default/header.php");
+    include("default/nav.php");
+    include("home.php");
+    include("default/footer.php");
 ?>

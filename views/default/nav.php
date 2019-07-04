@@ -3,8 +3,8 @@
         <a href="#" class="brand-logo"><img src="Public/img/LogoIHM.png"></a>
         <div class="right">
             <ul class="tabs tabs-transparent" style="margin-top: 2em;">
-                <li class="tab"><a href="#">Cidadão</a></li>
-                <li class="tab"><a href="#">Funcionário</a></li>
+                <li class="tab"><a href="../home.php">Cidadão</a></li>
+                <li class="tab"><a href="../funcionario.php">Funcionário</a></li>
             </ul>
         </div>
     </div>
