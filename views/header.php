@@ -26,4 +26,4 @@
   </style>
 </head>
 
-<body>
+<body style="background-color: #808080;">
