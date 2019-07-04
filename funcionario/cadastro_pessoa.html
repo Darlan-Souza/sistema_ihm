@@ -19,19 +19,14 @@
             min-height: 100vh;
             flex-direction: column;
         }
-
         main {
             flex: 1 0 auto;
-        }
-
-        #menu {
-            position: fixed;
         }
     </style>
 </head>
 
 <body>
-    <nav class="nav-extended" id="menu" style="background: rgba(22, 160, 133,1); height: 7em;">
+    <nav class="nav-extended" style="background: rgba(22, 160, 133,1); height: 7em;">
         <div class="nav-wrapper container">
             <a href="#" class="brand-logo" style="margin-top:-15px;"><img src="../Public/img/LogoIHC1.png"></a>
             <div class="right">
@@ -84,6 +79,10 @@
                                 <label for="last_name">Endereço</label>
                             </div>
                         </div>
+
+                        <div class="input-field col m12 s12">
+                            <p class="center"><a class="waves-effect waves-light btn green darken-3 editar" id="editar" style="color: #fff;"><i class="fas fa-check"></i> Cadastrar </a></p>
+                          </div>
 
                     </form>
                 </div>
