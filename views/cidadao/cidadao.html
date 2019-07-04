@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>ADOCÃO</title>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../../Public/css/materialize.min.css" media="screen,projection" />
+    <link href="../../Public/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../../Public/css/somesystem.css" rel="stylesheet">
+    <link href="../../Public/css/toastr.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+    </style>
+</head>
+
+<body style="background-color: #808080;">
+
+
+    <nav class="nav-extended" id="menu" style="background: rgba(22, 160, 133,1); height: 7em;position: relative;">
+        <div class="nav-wrapper container">
+            <a href="index.php" class="brand-logo" style="margin-top:-15px;"><img src="../../Public/img/LogoIHC1.png"></a>
+            <div class="right">
+                <ul class="tabs-transparent" style="margin-top: 2em;">
+                    <li class="tab"><a href="cidadao.php" style="font-size:2em;">Cidadão</a></li>
+                    <li class="tab"><a href="funcionario/funcionario.php" style="font-size:2em;">Funcionário</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br><br><br><br>
+    <main>
+
+        <div class="section no-pad-bot" id="index-banner">
+            <br>
+            <div class="home">
+                <br>
+                <h4 class="center"> Cidadão </h4>
+                <br>
+                <div class="row container">
+
+                    <div class="col m6 s12">
+                        <a href="adocao.php">
+                            <div class="card-panel area-psicologo center">
+                                <i class="fa fa-paw fa-5x" aria-hidden="true"></i>
+                                <h5>Animais para adoção</h5>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col m6 s12">
+                        <a href="meuspets.php">
+                            <div class="card-panel area-psicologo center">
+                                <i class="fa fa-map-marker fa-5x" aria-hidden="true"></i>
+                                <h5>Meus animais</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer" style="background: rgba(52, 73, 94,.8);">
+        <div class="container">
+            <p class="center">@copyright Adocão 2019</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../../Public/js/materialize.js"></script>
+</body>
+
+</html>
