@@ -1,0 +1,23 @@
+{
+  "name": "sistema_ihm",
+  "version": "1.0.0",
+  "description": "sistema_ihm",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darlan-Souza/sistema_ihm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Darlan-Souza/sistema_ihm/issues"
+  },
+  "homepage": "https://github.com/Darlan-Souza/sistema_ihm#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
