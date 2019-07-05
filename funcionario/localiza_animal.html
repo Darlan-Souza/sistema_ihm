@@ -13,6 +13,14 @@
     <link href="../Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="../Public/css/somesystem.css" rel="stylesheet">
     <link href="../Public/css/toastr.min.css" rel="stylesheet">
+    <link href="../Public/css/materialize.css" rel="stylesheet">
+    <link href="../Public/css/mbox-0.0.1.css" rel="stylesheet"> 
+
+
+    <link rel = "shortcut icon" type = "image/x-icon" href = "../../img/favicon.ico "/>
+    <title>Sistema DASA</title>
+  
+
     <style>
         body {
             display: flex;
@@ -51,22 +59,40 @@
             <h4 class="center"> Localizar animal </h4>
             <br>
             <div class="row container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30314.52623636436!2d-43.61763564946822!3d-18.24134004546895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaeb9ab8f0c38ff%3A0x20f6a7aa673dbbe1!2sDiamantina%2C+MG%2C+39100-000!5e0!3m2!1spt-PT!2sbr!4v1562285248549!5m2!1spt-PT!2sbr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+
+                <!--<iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30314.52623636436!2d-43.61763564946822!3d-18.24134004546895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaeb9ab8f0c38ff%3A0x20f6a7aa673dbbe1!2sDiamantina%2C+MG%2C+39100-000!5e0!3m2!1spt-PT!2sbr!4v1562285248549!5m2!1spt-PT!2sbr"
+                    width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>-->
             </div>
         </div>
         </div>
 
-    </main>
+        <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
 
-    <footer class="page-footer" style="background: rgba(52, 73, 94,.8);">
-        <div class="container">
-            <p class="center">@copyright Adocão 2019</p>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
         </div>
-    </footer>
 
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="../Public/js/materialize.js"></script>
-    <script src="../Public/js/init.js"></script>
+
+
 </body>
 
 </html>
+
+<!--Import jQuery before materialize.js-->
+<script src="../Public/js/jquery.js"></script>
+<script src="../Public/js/jquerymask.min.js"></script>
+<script src="../Public/js/drop_materialize.js"></script>
+<script src="../Public/js/mbox-0.0.1.js"></script>
+<script src="../Public/js/materialize.js"></script>
+<script src="../Public/js/init.js"></script>

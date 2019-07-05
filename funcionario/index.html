@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>ADOCÃO</title>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../Public/css/materialize.min.css" media="screen,projection" />
+    <link href="../Public/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../Public/css/somesystem.css" rel="stylesheet">
+    <link href="../Public/css/toastr.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+        #menu {
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-extended" style="background: rgba(22, 160, 133,1); height: 7em;">
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo" style="margin-top:-15px;"><img src="../Public/img/LogoIHC1.png"></a>
+            <div class="right">
+                <ul class="tabs-transparent" style="margin-top: 2em;">
+                    <li class="tab"><a href="cidadao/cidadao.html" style="font-size:2em;">Cidadão</a></li>
+                    <li class="tab"><a href="funcionario.php" style="font-size:2em;">Funcionário</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+
+        <div class="home">
+            <br>
+            <h4 class="center"> Gestão </h4>
+            <br>
+            <div class="row container">
+                <div class="col m6 s12 tooltipped" data-position="top" data-delay="100"
+                    data-tooltip="Cadastrar Pessoas e Animais">
+                    <a href="cadastro.html">
+                        <div class="card-panel area-psicologo center">
+                            <i class="fas fa-plus fa-5x" aria-hidden="true"></i>
+                            <h5>Cadastros</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col m6 s12 tooltipped" data-position="top" data-delay="100"
+                    data-tooltip="Localizar animais perdidos">
+                    <a href="localiza_animal.html">
+                        <div class="card-panel area-psicologo center">
+                            <i class="fas fa-map-marker-alt fa-5x" aria-hidden="true"></i>
+                            <h5>Localizar animal</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col m6 s12 tooltipped" data-position="top" data-delay="100"
+                    data-tooltip="Identificar interesados em adoção">
+                    <a href="ver_adocao.html">
+                        <div class="card-panel area-psicologo center">
+                            <i class="fas fa-eye fa-5x" aria-hidden="true"></i>
+                            <h5>Ver interasados em adoção</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col m6 s12 tooltipped" data-position="top" data-delay="100"
+                    data-tooltip="Gestão de funcionários">
+                    <a href="cadastro_funcionario.html">
+                        <div class="card-panel area-psicologo center">
+                            <i class="fas fa-users fa-5x" aria-hidden="true"></i>
+                            <h5>Gestão de funcionários</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="page-footer" style="background: rgba(52, 73, 94,.8);">
+        <div class="container">
+            <p class="center">@copyright Adocão 2019</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../Public/js/materialize.js"></script>
+    <script src="../Public/js/init.js"></script>
+</body>
+
+</html>

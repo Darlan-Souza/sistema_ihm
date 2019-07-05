@@ -1,108 +1,160 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <meta charset="UTF-8">
     <title>ADOCÃO</title>
-    <!-- CSS  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="Public/css/materialize.min.css" media="screen,projection" />
-    <link href="Public/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="Public/css/somesystem.css" rel="stylesheet">
-    <link href="Public/css/toastr.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link rel='stylesheet prefetch'
+        href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css'>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
     <style>
+        /*Downloaded from https://www.codeseek.co/j_holtslander/materialize-transparent-navbar-RVXzqm */
         body {
+            background-color: #555;
+        }
+
+        .video-container {
+            height: 50vh;
+            position: relative;
+            overflow: hidden;
+            padding-bottom: inherit;
+        }
+
+        @media (min-width: 600px) {
+            .video-container {
+                height: 100vh;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #333;
+            color: white;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-weight: 900;
+            margin: 0 0 1rem;
+            padding: 0;
+            line-height: 1;
+            font-size: 5vw;
+        }
+
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 22px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            h1 {
+                font-size: 75px;
+            }
+        }
+
+        .callout {
+            position: relative;
             display: flex;
-            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
             flex-direction: column;
+            height: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 10;
         }
 
-        main {
-            flex: 1 0 auto;
-        }
-
-        #menu {
+        .support {
             position: fixed;
+            bottom: 60px;
+            right: 20px;
+            text-transform: uppercase;
+            font-size: 9px;
+            letter-spacing: 1px;
+            text-align: right;
+            position: relative;
+            z-index: 10;
+        }
+
+        .support a {
+            color: white;
+            text-decoration: none;
+            position: relative;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .support a:before {
+            display: block;
+            position: absolute;
+            content: '';
+            bottom: -2px;
+            width: 0;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.3);
+            transition: .3s;
+        }
+
+        .support a:hover:before {
+            width: 100%;
         }
     </style>
+
 </head>
 
 <body>
-    <nav class="nav-extended" style="background: rgba(22, 160, 133,1); height: 7em;">
-        <div class="nav-wrapper container">
-            <a href="index.html" class="brand-logo" style="margin-top:-15px;"><img src="Public/img/LogoIHC1.png"></a>
-            <div class="right">
-                <ul class="tabs-transparent" style="margin-top: 2em;">
-                    <li class="tab"><a href="cidadao/cidadao.html" style="font-size:2em;">Cidadão</a></li>
-                    <li class="tab"><a href="funcionario/funcionario.php" style="font-size:2em;">Funcionário</a></li>
-                </ul>
+    <section class="video-container">
+        <div class="callout">
+            <h1>Participe de uma ONG</h1>
+            <div>
+                <p>Entre a violência com o ser hunmano e o animal a única diferença é a
+                    <b>vítima.</b></p>
+                <h3>Seja um colaboardor</h3>
+                <a class="waves-effect waves-light btn-large red lighten-2"
+                    href="login_funcionario.html" style="width: 15em;">Colaborador</a>
+                <a class="waves-effect waves-light btn-large red lighten-2"
+                    href="login_cidadao.html" style="width: 15em;">Cidadão</a>
             </div>
         </div>
-    </nav>
-    <main>
+    </section>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js'></script>
+    <script src='../Public/js/plnzqb.js'></script>
+    <script src="../Public/js/index.js"></script>
 
-        <div class="home">
-            <br>
-            <h4 class="center"> Gestão </h4>
-            <br>
-            <div class="row container">
-
-                <div class="col m6 s12 tooltipped" data-position="top" data-delay="100"
-                    data-tooltip="Gerenciar cadastros">
-                    <a href="funcionario/cadastro.html">
-                        <div class="card-panel area-psicologo center">
-                            <i class="fas fa-plus fa-5x" aria-hidden="true"></i>
-                            <h5>Cadastros</h5>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col m6 s12 tooltipped" data-position="top" data-delay="100"
-                    data-tooltip="Localizar animais perdidos">
-                    <a href="funcionario/localiza_animal.html">
-                        <div class="card-panel area-psicologo center">
-                            <i class="fas fa-map-marker-alt fa-5x" aria-hidden="true"></i>
-                            <h5>Localizar animal</h5>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col m6 s12 tooltipped" data-position="top" data-delay="100"
-                    data-tooltip="Identificar interesados em adoção">
-                    <a href="funcionario/ver_adocao.html">
-                        <div class="card-panel area-psicologo center">
-                            <i class="fas fa-eye fa-5x" aria-hidden="true"></i>
-                            <h5>Ver interasados em adoção</h5>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col m6 s12 tooltipped" data-position="top" data-delay="100"
-                    data-tooltip="Gestão de funcionários">
-                    <a href="funcionario/cadastro_funcionario.html">
-                        <div class="card-panel area-psicologo center">
-                            <i class="fas fa-users fa-5x" aria-hidden="true"></i>
-                            <h5>Gestão de funcionários</h5>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    <footer class="page-footer" style="background: rgba(52, 73, 94,.8);">
-        <div class="container">
-            <p class="center">@copyright Adocão 2019</p>
-        </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="Public/js/materialize.js"></script>
-    <script src="Public/js/init.js"></script>
 </body>
 
 </html>
+
+<script>
+
+
+    /*Downloaded from https://www.codeseek.co/j_holtslander/materialize-transparent-navbar-RVXzqm */
+    $(document).ready(function () {
+        // MODAL
+        $('.modal').modal();
+        // DROPDOWNS
+        $(".dropdown-button").dropdown(
+            {
+                belowOrigin: true
+            }
+        );
+        // TABS
+        $('ul.tabs').tabs();
+        // SCROLLSPY
+        $('.scrollspy').scrollSpy();
+        //SIDENAV
+        $(".button-collapse").sideNav();
+    });
+
+</script>
