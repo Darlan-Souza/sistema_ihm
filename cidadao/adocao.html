@@ -14,6 +14,7 @@
   <link href="../Public/css/somesystem.css" rel="stylesheet">
   <link href="../Public/css/toastr.min.css" rel="stylesheet">
   <link href="../Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../Public/css/mbox-0.0.1.css" rel="stylesheet">
 
   <style>
     body {
@@ -24,6 +25,10 @@
 
     main {
       flex: 1 0 auto;
+    }
+
+    .user_email:hover {
+      background: rgba(231, 76, 60, .7);
     }
   </style>
 </head>
@@ -82,6 +87,9 @@
               <th>Situação</th>
               <th>Especie</th>
               <th>Idade</th>
+              <th>Código da coleira</th>
+              <th>Informações</th>
+              <th>Localizar</th>
             </tr>
           </thead>
 
@@ -92,18 +100,11 @@
               <td>Castrado</td>
               <td>Cão</td>
               <td>Adulto</td>
-              <td><a href="#" class="waves-circle btn-floating blue"><i class="fa fa-search-plus"></a></td>
-              <td><a href="localization.html" class="waves-circle btn-floating green"><i class="fa fa-map-marker"></a>
+              <td>9789.00</td>
+              <td><a href="#" class="waves-circle btn-floating blue user_email"><i class="fa fa-search-plus"></i></a>
               </td>
-            </tr>
-            <tr>
-              <td>Bela</td>
-              <td>Fêmea</td>
-              <td>Fértil</td>
-              <td>Gato</td>
-              <td>Filhote</td>
-              <td><a href="#" class="waves-circle btn-floating blue"><i class="fa fa-search-plus"></a></td>
-              <td><a href="localization.html" class="waves-circle btn-floating green"><i class="fa fa-map-marker"></a>
+              <td><a href="localization.html" class="waves-circle btn-floating green"><i
+                    class="fa fa-map-marker"></i></a>
               </td>
             </tr>
           </tbody>
@@ -111,15 +112,83 @@
       </div>
     </div>
   </div>
+
+
+  <!-- Modal Structure -->
+  <div id="modal2" class="modal modal-fixed-footer" style="margin-top: 70px;">
+    <div class="modal-content">
+      <h4 class="center title_responsivo">Informações do animal</h4>
+
+      <div class="row">
+        <div class="input-field col s12 m6">
+          <input placeholder="Nome do animal" id="" type="text">
+          <label for="">Nome</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <input placeholder="Sexo do animal" id="" type="text">
+          <label for="">Sexo</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <input placeholder="Situação do animal" id="" type="text">
+          <label for="">Situaçao</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <input placeholder="Espécie do animal" id="" type="text">
+          <label for="">Espécie</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <input placeholder="Idade do animal" id="" type="text">
+          <label for="">Idade</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <input placeholder="Código da coleira" id="" type="text">
+          <label for="">Código da coleira</label>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="localization.html" class="modal-close waves-effect waves-green btn-flat green"
+        style="color: white;">Localizar</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">cancelar</a>
+    </div>
+  </div>
+
   <footer class="page-footer" style="background: rgba(52, 73, 94,.8);">
     <div class="container">
       <p class="center">&copy; Adocão 2019<p>
     </div>
   </footer>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="../Public/js/materialize.js"></script>
-  <script src="../Public/js/init.js"></script>
 </body>
 
 </html>
+
+<script src="../Public/js/init.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../Public/js/materialize.min.js"></script>
+<script src="../Public/js/mbox-0.0.1.js"></script>
+
+<script>
+  $(document).ready(function () {
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal({
+      dismissible: false, // Modal can be dismissed by clicking outside of the modal
+      opacity: .7, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+    });
+
+    $('.user_email').click(function (e) {
+      e.preventDefault();
+      $('#modal2').modal('open');
+    });
+
+    $('#enviar_email_user').click(function (e) {
+      e.preventDefault();
+      return mbox.alert('E-mail enviado com sucesso!');
+      location.reload("index.html");
+    });
+
+  });
+</script>
