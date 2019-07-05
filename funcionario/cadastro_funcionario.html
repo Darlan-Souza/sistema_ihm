@@ -79,8 +79,8 @@
     <div class="col m12 s12">
         <a class="waves-effect waves-light btn" onclick="history.go(-1);"
             style="background: #34a5a1; color: white; margin: 1em;"><i class="fas fa-arrow-left"></i> Voltar</a>
-        <a class="waves-effect waves-light btn" style="background:rgba(46, 204, 113,1.0); color: white; margin: 1em;"><i
-                class="fas fa-plus"></i>
+        <a class="waves-effect waves-light btn addcolaborador"
+            style="background:rgba(46, 204, 113,1.0); color: white; margin: 1em;"><i class="fas fa-plus"></i>
             Adicionar</a>
     </div>
 
@@ -118,7 +118,7 @@
                                 <td class=" center celula">Masculino</td>
                                 <td class=" center celula">163.897.324.90</td>
                                 <td class=" center celula">(33) 9 9065-2355</td>
-                                <td class=" center center editar"><i class="fas fa-pen"></i></td>
+                                <td class=" center center editar user_email"><i class="fas fa-pen"></i></td>
                                 <td class=" center center remover"><i class="fas fa-times"></i></td>
                                 </td>
                             </tr>
@@ -129,6 +129,114 @@
         </div>
         </div>
     </main>
+
+
+    <!-- Modal Structure -->
+    <div id="modal2" class="modal modal-fixed-footer" style="margin-top: 70px;">
+        <div class="modal-content">
+            <h4 class="center title_responsivo">Editar dados</h4>
+
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <input placeholder="Nome do coladorador" id="" type="text">
+                    <label for="">Nome</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input placeholder="Sobrenome do colaborador" id="" type="text">
+                    <label for="">Sobrenome</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input placeholder="Data de nascimento colaborador" id="" type="text">
+                    <label for="">Data de nascimento</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input placeholder="Cidade do coladorador" id="" type="text">
+                    <label for="">Cidade</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input placeholder="Estado do colaborador" id="" type="text">
+                    <label for="">Estado</label>
+                </div>
+                <div class="input-field col m6 s12">
+                    <select name="tipo_produto" id="tipo_produto">
+                        <option value="0" selected>Masculino</option>
+                        <option value="2">Feminino</option>
+                    </select>
+                    <label>Sexo</label>
+                </div>
+
+                <div class="input-field col s12 m6">
+                    <input placeholder="CPF" id="" type="text">
+                    <label for="">CPF</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input placeholder="Telefone" id="" type="text">
+                    <label for="">Telefone</label>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a id="enviar_email_user" class="modal-close waves-effect waves-green btn-flat green"
+                style="color: white;">Salvar alterações</a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">cancelar</a>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal modal-fixed-footer" style="margin-top: 70px;">
+        <div class="modal-content">
+            <h4 class="center title_responsivo">Cadastrar colaborador</h4>
+
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <input placeholder="Nome do coladorador" id="" type="text">
+                    <label for="">Nome</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input placeholder="Sobrenome do colaborador" id="" type="text">
+                    <label for="">Sobrenome</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input placeholder="Data de nascimento colaborador" id="" type="text">
+                    <label for="">Data de nascimento</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input placeholder="Cidade do coladorador" id="" type="text">
+                    <label for="">Cidade</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input placeholder="Estado do colaborador" id="" type="text">
+                    <label for="">Estado</label>
+                </div>
+                <div class="input-field col m6 s12">
+                    <select name="tipo_produto" id="tipo_produto">
+                        <option value="0" selected>Masculino</option>
+                        <option value="2">Feminino</option>
+                    </select>
+                    <label>Sexo</label>
+                </div>
+
+                <div class="input-field col s12 m6">
+                    <input placeholder="CPF" id="" type="text">
+                    <label for="">CPF</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input placeholder="Telefone" id="" type="text">
+                    <label for="">Telefone</label>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a id="addcolab" class="modal-close waves-effect waves-green btn-flat green"
+                style="color: white;">Cadastrar</a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">cancelar</a>
+        </div>
+    </div>
+
 
     <footer class="page-footer" style="background: rgba(52, 73, 94,.8);">
         <div class="container">
@@ -146,14 +254,57 @@
 
 
 <script>
+    window.onload = function () {
+        $(document).ready(function () {
+            $('select').material_select();
+        });
+    }
     $(document).ready(function () {
 
-        $('#editar').click(function (e) {
-            e.preventDefault();
-            return mbox.alert('Cadastro realizado com sucesso!');
-            window.location = "index.html";
+        // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal({
+            dismissible: false, // Modal can be dismissed by clicking outside of the modal
+            opacity: .7, // Opacity of modal background
+            inDuration: 300, // Transition in duration
+            outDuration: 200, // Transition out duration
+            startingTop: '4%', // Starting top style attribute
+            endingTop: '10%', // Ending top style attribute
         });
 
+        $('.user_email').click(function (e) {
+            e.preventDefault();
+            $('#modal2').modal('open');
+        });
+
+        $('.remover').click(function (e) {
+            e.preventDefault();
+            mbox.confirm('Deseja excluir este colaborador?', function (yes) {
+                if (!yes) {
+                    return false;
+                } else {
+                    Materialize.toast("Ocorrência Excluida.", 3000, "rounded", function () {
+                        location.reload();
+                    });
+                }
+            });
+        });
+
+        $('.addcolaborador').click(function (e) {
+            e.preventDefault();
+            $('#modal1').modal('open');
+        });
+
+        $('#addcolab').click(function (e) {
+            e.preventDefault();
+            return mbox.alert('Colaborador adicionado com sucesso!');
+            location.reload("index.html");
+        });
+
+        $('#enviar_email_user').click(function (e) {
+            e.preventDefault();
+            return mbox.alert('Colaborador editado com sucesso!');
+            location.reload("index.html");
+        });
 
     });
 </script>
