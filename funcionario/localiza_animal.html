@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>ADOCÃO</title>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../Public/css/materialize.min.css" media="screen,projection" />
+    <link href="../Public/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../Public/css/somesystem.css" rel="stylesheet">
+    <link href="../Public/css/toastr.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-extended" style="background: rgba(22, 160, 133,1); height: 7em;">
+        <div class="nav-wrapper container">
+            <a href="../index.html" class="brand-logo" style="margin-top:-15px;"><img
+                    src="../Public/img/LogoIHC1.png"></a>
+            <div class="right">
+                <ul class="tabs-transparent" style="margin-top: 2em;">
+                    <li class="tab"><a href="home.php" style="font-size:2em;">Cidadão</a></li>
+                    <li class="tab"><a href="funcionario/funcionario.php" style="font-size:2em;">Funcionário</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <div class="col m12 s12">
+        <a class="waves-effect waves-light btn" onclick="history.go(-1);"
+            style="background: #34a5a1; color: white; margin: 1em;"><i class="fas fa-arrow-left"></i> Voltar</a>
+    </div>
+
+    <main>
+
+        <div class="home">
+            <h4 class="center"> Localizar animal </h4>
+            <br>
+            <div class="row container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30314.52623636436!2d-43.61763564946822!3d-18.24134004546895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaeb9ab8f0c38ff%3A0x20f6a7aa673dbbe1!2sDiamantina%2C+MG%2C+39100-000!5e0!3m2!1spt-PT!2sbr!4v1562285248549!5m2!1spt-PT!2sbr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+        </div>
+
+    </main>
+
+    <footer class="page-footer" style="background: rgba(52, 73, 94,.8);">
+        <div class="container">
+            <p class="center">@copyright Adocão 2019</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../Public/js/materialize.js"></script>
+    <script src="../Public/js/init.js"></script>
+</body>
+
+</html>
