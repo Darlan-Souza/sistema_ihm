@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ADOCÃO</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link rel='stylesheet prefetch'
+        href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css'>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+            background: rgba(52, 73, 94, 1.0);
+        }
+
+        #login-page {
+            width: 400px;
+        }
+
+        .card {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -moz-transform: translate(-50%, -50%) -webkit-transform: translate(-50%, -50%) -ms-transform: translate(-50%, -50%) -o-transform: translate(-50%, -50%) transform: translate(-50%, -50%);
+        }
+    </style>
+
+</head>
+
+<body ng-app="mainModule" ng-controller="mainController">
+    <div id="login-page" class="row">
+        <div class="center">
+            <img src="Public/img/LogoIHC1.png">
+        </div>
+        <div class="col s12 z-depth-6 card-panel">
+            <form class="login-form">
+                <div class="row">
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">mail_outline</i>
+                        <input class="validate" id="email" type="email">
+                        <label for="email" data-error="wrong" data-success="right">E-mail</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">lock_outline</i>
+                        <input id="password" type="password">
+                        <label for="password">Senha</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m12 l12  login-text">
+                        <input type="checkbox" id="remember-me" />
+                        <label for="remember-me">Salvar</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <a href="cidadao/index.html" class="btn waves-effect waves-light col s12">Login</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 m6 l6">
+                        <p class="margin medium-small"><a href="#">Craiar conta!</a></p>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js'></script>
+<script src='../Public/js/plnzqb.js'></script>
+<script src="../Public/js/index.js"></script>
+<script>
+
+    var app = angular.module('mainModule', []);
+    app.controller('mainController', function ($scope, $http) {
+    $scope.nome = 'Valor Inicial';
+        $scope.reset = function () {
+            $scope.nome = '';
+        }
+    });
+
+</script>

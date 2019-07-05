@@ -7,94 +7,276 @@
   <title>ADOCÃO</title>
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="../Public/css/materialize.min.css" media="screen,projection" />
-    <link href="../Public/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="../Public/css/somesystem.css" rel="stylesheet">
-    <link href="../Public/css/toastr.min.css" rel="stylesheet">
-    <style>
-        body {
-            display: flex;
-            min-height: 100vh;
-            flex-direction: column;
-        }
+  <link type="text/css" rel="stylesheet" href="../Public/css/materialize.min.css" media="screen,projection" />
+  <link href="../Public/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="../Public/css/somesystem.css" rel="stylesheet">
+  <link href="../Public/css/toastr.min.css" rel="stylesheet">
+  <link href="../Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../Public/css/mbox-0.0.1.css" rel="stylesheet">
 
-        main {
-            flex: 1 0 auto;
-        }
-    </style>
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1 0 auto;
+    }
+
+    .user_email:hover {
+      background: rgba(231, 76, 60, .7);
+    }
+
+    .detalhes_lista:hover .celula {
+      background: rgba(0, 169, 161, 0.3);
+    }
+
+    .localiza:hover {
+      background: rgba(46, 204, 113, .7);
+    }
+
+    .informacao:hover {
+      background: rgba(52, 152, 219,.6);
+    }
+  </style>
 </head>
 
-<body style="background-color: #808080;">
+<body style="background-image: url(../Public/img/background.png);">
 
+  <div class="navbar-fixed ">
+    <nav style="background: rgba(22, 160, 133,1); height: 7em;">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo" style="text-decoration:none; margin-top:-20px;"><img
+            src="../Public/img/LogoIHC1.png"></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down" style="margin-top: 1em;">
+          <li><a href="adocao.html" class="btn waves-effect waves-light deep-orange lighten-2">Animais</a>
+          </li>
+          <li><a href="meuspets.html" class="btn waves-effect waves-light deep-orange lighten-2">Adoção</a>
+          </li>
+          <li><a href="../index.html" class="waves-effect waves-light lighten-2"><i
+                class="fas fa-sign-out-alt fa-2x"></i></a></li>
 
-    <nav class="nav-extended" id="menu" style="background: rgba(22, 160, 133,1); height: 7em;position: relative;">
-        <div class="nav-wrapper container">
-            <a href="../index.html" class="brand-logo" style="margin-top:-15px;"><img
-                    src="../Public/img/LogoIHC1.png"></a>
-            <div class="right">
-                <ul class="tabs-transparent" style="margin-top: 2em;">
-                    <li class="tab"><a href="cidadao.html" style="font-size:2em;">Cidadão</a></li>
-                    <li class="tab"><a href="../funcionario/funcionario.html" style="font-size:2em;">Funcionário</a>
-                    </li>
-                </ul>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="adocao.html">Animais</a></li>
+          <li><a href="meuspets.html">Adoção</a></li>
+          <li><a href="../index.html"><i class="fas fa-sign-out-alt fa-2x"></i></a></li>
+          <li class="search">
+            <div class="search-wrapper card input-field">
+              <input type="search" required onkeyup="getBlogs(this.value,1);">
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+              <div id="searchResults2"></div>
             </div>
-        </div>
+          </li>
+        </ul>
+      </div>
     </nav>
-  <br><br><br><br><br>
+  </div>
+  <br><br>
+  <div class="col m12 s12">
+    <a class="waves-effect waves-light btn" onclick="history.go(-1);"
+      style="background: #34a5a1; color: white; margin: 1em;"><i class="fas fa-arrow-left"></i> Voltar</a>
+  </div>
 
   <div class="section no-pad-bot" id="index-banner">
-    <br>
     <div class="home">
       <div class="container">
-        <br>
         <h4 class="center">Animais para adoção</h4>
         <br>
-        <table class="striped responsive-table centered" style="background-color: #778899;">
-          <thead>
+        <table class="striped responsive-table">
+          <thead style="background: #34a5a1;">
             <tr>
-              <th>Nome</th>
-              <th>Sexo</th>
-              <th>Situação</th>
-              <th>Especie</th>
-              <th>Idade</th>
+              <th class="center">Nome</th>
+              <th class="center">Sexo</th>
+              <th class="center">Situação</th>
+              <th class="center">Especie</th>
+              <th class="center">Idade</th>
+              <th class="center">Código da coleira</th>
+              <th class="center">Informações</th>
+              <th class="center">Localizar</th>
             </tr>
           </thead>
 
           <tbody>
-            <tr>
-              <td>Scooby</td>
-              <td>Macho</td>
-              <td>Castrado</td>
-              <td>Cão</td>
-              <td>Adulto</td>
-              <td><a href="#" class="waves-circle btn-floating blue"><i class="fa fa-search-plus"></a></td>
-              <td><a href="localization.html" class="waves-circle btn-floating green"><i class="fa fa-map-marker"></a></td>
+            <tr  class="detalhes_lista">
+              <td class="celula center">Scooby</td>
+              <td class="celula center">Macho</td>
+              <td class="celula center">Castrado</td>
+              <td class="celula center">Cão</td>
+              <td class="celula center">Adulto</td>
+              <td class="celula center">9789.00</td>
+              <td class="center informacao"><a href="#" class="waves-circle btn-floating blue user_email"><i class="fa fa-search-plus"></i></a>
+              </td>
+              <td class="center localiza"><a href="localization.html" class="waves-circle btn-floating green"><i
+                    class="fa fa-map-marker"></i></a>
+              </td>
             </tr>
-            <tr>
-              <td>Bela</td>
-              <td>Fêmea</td>
-              <td>Fértil</td>
-              <td>Gato</td>
-              <td>Filhote</td>
-              <td><a href="#" class="waves-circle btn-floating blue"><i class="fa fa-search-plus"></a></td>
-              <td><a href="localization.html" class="waves-circle btn-floating green"><i class="fa fa-map-marker"></a></td>
-            </tr>
+            <tr  class="detalhes_lista">
+                <td class="celula center">Scooby</td>
+                <td class="celula center">Macho</td>
+                <td class="celula center">Castrado</td>
+                <td class="celula center">Cão</td>
+                <td class="celula center">Adulto</td>
+                <td class="celula center">9789.00</td>
+                <td class="center informacao"><a href="#" class="waves-circle btn-floating blue user_email"><i class="fa fa-search-plus"></i></a>
+                </td>
+                <td class="center localiza"><a href="localization.html" class="waves-circle btn-floating green"><i
+                      class="fa fa-map-marker"></i></a>
+                </td>
+              </tr>
+              <tr  class="detalhes_lista">
+                  <td class="celula center">Scooby</td>
+                  <td class="celula center">Macho</td>
+                  <td class="celula center">Castrado</td>
+                  <td class="celula center">Cão</td>
+                  <td class="celula center">Adulto</td>
+                  <td class="celula center">9789.00</td>
+                  <td class="center informacao"><a href="#" class="waves-circle btn-floating blue user_email"><i class="fa fa-search-plus"></i></a>
+                  </td>
+                  <td class="center localiza"><a href="localization.html" class="waves-circle btn-floating green"><i
+                        class="fa fa-map-marker"></i></a>
+                  </td>
+                </tr>
+                <tr  class="detalhes_lista">
+                    <td class="celula center">Scooby</td>
+                    <td class="celula center">Macho</td>
+                    <td class="celula center">Castrado</td>
+                    <td class="celula center">Cão</td>
+                    <td class="celula center">Adulto</td>
+                    <td class="celula center">9789.00</td>
+                    <td class="center informacao"><a href="#" class="waves-circle btn-floating blue user_email"><i class="fa fa-search-plus"></i></a>
+                    </td>
+                    <td class="center localiza"><a href="localization.html" class="waves-circle btn-floating green"><i
+                          class="fa fa-map-marker"></i></a>
+                    </td>
+                  </tr>
+                  <tr  class="detalhes_lista">
+                      <td class="celula center">Scooby</td>
+                      <td class="celula center">Macho</td>
+                      <td class="celula center">Castrado</td>
+                      <td class="celula center">Cão</td>
+                      <td class="celula center">Adulto</td>
+                      <td class="celula center">9789.00</td>
+                      <td class="center informacao"><a href="#" class="waves-circle btn-floating blue user_email"><i class="fa fa-search-plus"></i></a>
+                      </td>
+                      <td class="center localiza"><a href="localization.html" class="waves-circle btn-floating green"><i
+                            class="fa fa-map-marker"></i></a>
+                      </td>
+                    </tr>
+                    <tr  class="detalhes_lista">
+                        <td class="celula center">Scooby</td>
+                        <td class="celula center">Macho</td>
+                        <td class="celula center">Castrado</td>
+                        <td class="celula center">Cão</td>
+                        <td class="celula center">Adulto</td>
+                        <td class="celula center">9789.00</td>
+                        <td class="center informacao"><a href="#" class="waves-circle btn-floating blue user_email"><i class="fa fa-search-plus"></i></a>
+                        </td>
+                        <td class="center localiza"><a href="localization.html" class="waves-circle btn-floating green"><i
+                              class="fa fa-map-marker"></i></a>
+                        </td>
+                      </tr>
+                      <tr  class="detalhes_lista">
+                          <td class="celula center">Scooby</td>
+                          <td class="celula center">Macho</td>
+                          <td class="celula center">Castrado</td>
+                          <td class="celula center">Cão</td>
+                          <td class="celula center">Adulto</td>
+                          <td class="celula center">9789.00</td>
+                          <td class="center informacao"><a href="#" class="waves-circle btn-floating blue user_email"><i class="fa fa-search-plus"></i></a>
+                          </td>
+                          <td class="center localiza"><a href="localization.html" class="waves-circle btn-floating green"><i
+                                class="fa fa-map-marker"></i></a>
+                          </td>
+                        </tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
-  <footer class="page-footer" style="background: rgba(52, 73, 94,.8);">
-      <div class="container">
-          <p class="center">@copyright Adocão 2019</p>
-      </div>
-  </footer>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="../Public/js/materialize.js"></script>
-  <script src="../Public/js/init.js"></script>
+
+  <!-- Modal Structure -->
+  <div id="modal2" class="modal modal-fixed-footer" style="margin-top: 70px;">
+    <div class="modal-content">
+      <h4 class="center title_responsivo">Informações do animal</h4>
+
+      <div class="row">
+        <div class="input-field col s12 m6">
+          <input placeholder="Nome do animal" id="" type="text">
+          <label for="">Nome</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <input placeholder="Sexo do animal" id="" type="text">
+          <label for="">Sexo</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <input placeholder="Situação do animal" id="" type="text">
+          <label for="">Situaçao</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <input placeholder="Espécie do animal" id="" type="text">
+          <label for="">Espécie</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <input placeholder="Idade do animal" id="" type="text">
+          <label for="">Idade</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <input placeholder="Código da coleira" id="" type="text">
+          <label for="">Código da coleira</label>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="localization.html" class="modal-close waves-effect waves-green btn-flat green"
+        style="color: white;">Localizar</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">cancelar</a>
+    </div>
+  </div>
+
+  <footer class="page-footer" style="background: rgba(52, 73, 94,.8);">
+    <div class="container">
+      <p class="center">&copy; Adocão 2019<p>
+    </div>
+  </footer>
 </body>
 
 </html>
+
+<script src="../Public/js/init.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../Public/js/materialize.min.js"></script>
+<script src="../Public/js/mbox-0.0.1.js"></script>
+
+<script>
+  $(document).ready(function () {
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal({
+      dismissible: false, // Modal can be dismissed by clicking outside of the modal
+      opacity: .7, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+    });
+
+    $('.user_email').click(function (e) {
+      e.preventDefault();
+      $('#modal2').modal('open');
+    });
+
+    $('#enviar_email_user').click(function (e) {
+      e.preventDefault();
+      return mbox.alert('E-mail enviado com sucesso!');
+      location.reload("index.html");
+    });
+
+  });
+</script>
