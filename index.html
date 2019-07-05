@@ -6,7 +6,6 @@
     <title>ADOCÃO</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
     <link rel='stylesheet prefetch'
         href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css'>
     <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
@@ -14,11 +13,6 @@
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
 
     <style>
-        /*Downloaded from https://www.codeseek.co/j_holtslander/materialize-transparent-navbar-RVXzqm */
-        body {
-            background-color: #555;
-        }
-
         .video-container {
             height: 50vh;
             position: relative;
@@ -73,57 +67,20 @@
             position: relative;
             z-index: 10;
         }
-
-        .support {
-            position: fixed;
-            bottom: 60px;
-            right: 20px;
-            text-transform: uppercase;
-            font-size: 9px;
-            letter-spacing: 1px;
-            text-align: right;
-            position: relative;
-            z-index: 10;
-        }
-
-        .support a {
-            color: white;
-            text-decoration: none;
-            position: relative;
-            display: inline-block;
-            margin-top: 10px;
-        }
-
-        .support a:before {
-            display: block;
-            position: absolute;
-            content: '';
-            bottom: -2px;
-            width: 0;
-            height: 1px;
-            background-color: rgba(255, 255, 255, 0.3);
-            transition: .3s;
-        }
-
-        .support a:hover:before {
-            width: 100%;
-        }
     </style>
-
 </head>
 
 <body>
     <section class="video-container">
         <div class="callout">
-            <h1>Participe de uma ONG</h1>
+            <h1><b>Participe de uma ONG</h1>
             <div>
-                <p>Entre a violência com o ser hunmano e o animal a única diferença é a
-                    <b>vítima.</b></p>
-                <h3>Seja um colaboardor</h3>
-                <a class="waves-effect waves-light btn-large red lighten-2"
-                    href="login_funcionario.html" style="width: 15em;">Colaborador</a>
-                <a class="waves-effect waves-light btn-large red lighten-2"
-                    href="login_cidadao.html" style="width: 15em;">Cidadão</a>
+                <p>Entre a violência com o ser humano e o animal a única diferença é a vítima.</p>
+                <h3>Seja um colaborador</h3>
+                <a class="waves-effect waves-light btn-large red lighten-2" href="login_funcionario.html"
+                    style="width: 15em;">Colaborador</a>
+                <a class="waves-effect waves-light btn-large red lighten-2" href="login_cidadao.html"
+                    style="width: 15em;">Cidadão</a>
             </div>
         </div>
     </section>
@@ -135,26 +92,3 @@
 </body>
 
 </html>
-
-<script>
-
-
-    /*Downloaded from https://www.codeseek.co/j_holtslander/materialize-transparent-navbar-RVXzqm */
-    $(document).ready(function () {
-        // MODAL
-        $('.modal').modal();
-        // DROPDOWNS
-        $(".dropdown-button").dropdown(
-            {
-                belowOrigin: true
-            }
-        );
-        // TABS
-        $('ul.tabs').tabs();
-        // SCROLLSPY
-        $('.scrollspy').scrollSpy();
-        //SIDENAV
-        $(".button-collapse").sideNav();
-    });
-
-</script>

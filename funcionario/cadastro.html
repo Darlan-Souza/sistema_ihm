@@ -30,20 +30,42 @@
     </style>
 </head>
 
-<body>
-    <nav class="nav-extended" id="menu" style="background: rgba(22, 160, 133,1); height: 7em;">
-        <div class="nav-wrapper container">
-            <a href="../index.html"  class="brand-logo" style="margin-top:-15px;"><img src="../Public/img/LogoIHC1.png"></a>
-            <div class="right">
-                <ul class="tabs-transparent" style="margin-top: 2em;">
-                    <li class="tab"><a href="home.php" style="font-size:2em;">Cidadão</a></li>
-                    <li class="tab"><a href="funcionario/funcionario.php" style="font-size:2em;">Funcionário</a></li>
+<body style="background-image: url(../Public/img/background.png);">
+    <div class="navbar-fixed ">
+        <nav style="background: rgba(22, 160, 133,1); height: 7em;">
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo" style="text-decoration:none; margin-top:-20px;"><img
+                        src="../Public/img/LogoIHC1.png"></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down" style="margin-top: 1em;">
+                    <li><a href="cadastro_funcionario.html"
+                            class="btn waves-effect waves-light deep-orange lighten-2">Funcioários</a></li>
+                    <li><a href="cadastro.html" class="btn waves-effect waves-light deep-orange lighten-2">Cadastro</a>
+                    </li>
+                    <li><a href="localiza_animal.html"
+                            class="btn waves-effect waves-light deep-orange lighten-2">Localização</a></li>
+                    <li><a href="../index.html" class="waves-effect waves-light lighten-2"><i
+                                class="fas fa-sign-out-alt fa-2x"></i></a></li>
+
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="cadastro_funcionario.html">Funcioários</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="localiza_animal.html">Localização</a></li>
+                    <li><a href="../index.html"><i class="fas fa-sign-out-alt fa-2x"></i></a></li>
+                    <li class="search">
+                        <div class="search-wrapper card input-field">
+                            <input type="search" required onkeyup="getBlogs(this.value,1);">
+                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
+                            <div id="searchResults2"></div>
+                        </div>
+                    </li>
                 </ul>
             </div>
-        </div>
-    </nav>
-    <br><br><br><br>
-    <br>
+        </nav>
+    </div>
+    <br><br>
     <div class="col m12 s12">
         <a class="waves-effect waves-light btn" onclick="history.go(-1);"
             style="background: #34a5a1; color: white; margin: 1em;"><i class="fas fa-arrow-left"></i> Voltar</a>

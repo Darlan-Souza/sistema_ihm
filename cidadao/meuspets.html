@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="../Public/css/somesystem.css" rel="stylesheet">
     <link href="../Public/css/toastr.min.css" rel="stylesheet">
+    <link href="../Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
     <style>
         body {
             display: flex;
@@ -26,23 +28,44 @@
     </style>
 </head>
 
-<body style="background-color: #808080;">
+<body style="background-image: url(../Public/img/background.png);">
 
+    <div class="navbar-fixed ">
+        <nav style="background: rgba(22, 160, 133,1); height: 7em;">
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo" style="text-decoration:none; margin-top:-20px;"><img
+                        src="../Public/img/LogoIHC1.png"></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down" style="margin-top: 1em;">
+                    <li><a href="adocao.html" class="btn waves-effect waves-light deep-orange lighten-2">Animais</a>
+                    </li>
+                    <li><a href="meuspets.html" class="btn waves-effect waves-light deep-orange lighten-2">Doação</a>
+                    </li>
+                    <li><a href="../index.html" class="waves-effect waves-light lighten-2"><i
+                                class="fas fa-sign-out-alt fa-2x"></i></a></li>
 
-    <nav class="nav-extended" id="menu" style="background: rgba(22, 160, 133,1); height: 7em;position: relative;">
-        <div class="nav-wrapper container">
-            <a href="../index.html" class="brand-logo" style="margin-top:-15px;"><img
-                    src="../Public/img/LogoIHC1.png"></a>
-            <div class="right">
-                <ul class="tabs-transparent" style="margin-top: 2em;">
-                    <li class="tab"><a href="cidadao.html" style="font-size:2em;">Cidadão</a></li>
-                    <li class="tab"><a href="../funcionario/funcionario.html" style="font-size:2em;">Funcionário</a>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="adocao.html">Animais</a></li>
+                    <li><a href="meuspets.html">Doação</a></li>
+                    <li><a href="../index.html"><i class="fas fa-sign-out-alt fa-2x"></i></a></li>
+                    <li class="search">
+                        <div class="search-wrapper card input-field">
+                            <input type="search" required onkeyup="getBlogs(this.value,1);">
+                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
+                            <div id="searchResults2"></div>
+                        </div>
                     </li>
                 </ul>
             </div>
-        </div>
-    </nav>
-    <br><br><br><br><br>
+        </nav>
+    </div>
+    <br><br>
+    <div class="col m12 s12">
+        <a class="waves-effect waves-light btn" onclick="history.go(-1);"
+            style="background: #34a5a1; color: white; margin: 1em;"><i class="fas fa-arrow-left"></i> Voltar</a>
+    </div>
 
     <div class="section no-pad-bot" id="index-banner">
         <br>
@@ -69,8 +92,10 @@
                             <td>Castrado</td>
                             <td>Cão</td>
                             <td>Adulto</td>
-                            <td><a href="#" class="waves-circle btn-floating blue"><i class="fa fa-search-plus"></a></td>
-                            <td><a href="localization.html" class="waves-circle btn-floating green"><i class="fa fa-map-marker"></a></td>
+                            <td><a href="#" class="waves-circle btn-floating blue"><i class="fa fa-search-plus"></a>
+                            </td>
+                            <td><a href="localization.html" class="waves-circle btn-floating green"><i
+                                        class="fa fa-map-marker"></a></td>
                         </tr>
                         <tr>
                             <td>Bela</td>
@@ -78,8 +103,10 @@
                             <td>Fértil</td>
                             <td>Gato</td>
                             <td>Filhote</td>
-                            <td><a href="#" class="waves-circle btn-floating blue"><i class="fa fa-search-plus"></a></td>
-                            <td><a href="localization.html" class="waves-circle btn-floating green"><i class="fa fa-map-marker"></a></td>
+                            <td><a href="#" class="waves-circle btn-floating blue"><i class="fa fa-search-plus"></a>
+                            </td>
+                            <td><a href="localization.html" class="waves-circle btn-floating green"><i
+                                        class="fa fa-map-marker"></a></td>
                         </tr>
                     </tbody>
                 </table>
