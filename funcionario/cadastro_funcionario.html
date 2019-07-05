@@ -13,6 +13,8 @@
     <link href="../Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="../Public/css/somesystem.css" rel="stylesheet">
     <link href="../Public/css/toastr.min.css" rel="stylesheet">
+    <link href="../Public/css/mbox-0.0.1.css" rel="stylesheet">   
+
     <style>
         body {
             display: flex;
@@ -133,9 +135,25 @@
             <p class="center">@copyright Adocão 2019</p>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="../Public/js/materialize.js"></script>
-    <script src="../Public/js/init.js"></script>
 </body>
 
 </html>
+
+<script src="../Public/js/init.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../Public/js/materialize.min.js"></script>
+<script src="../Public/js/mbox-0.0.1.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+
+        $('#editar').click(function (e) {
+            e.preventDefault();
+            return mbox.alert('Cadastro realizado com sucesso!');
+            window.location = "index.html";
+        });
+
+
+    });
+</script>
