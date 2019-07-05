@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-    <title>ADOCÃO</title>
+    <title>SavePets</title>
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="../Public/css/materialize.min.css" media="screen,projection" />
@@ -64,66 +64,68 @@
         </nav>
     </div>
     <br><br>
-    <div class="col m12 s12" style="margin-top: 50px">
-        <a class="waves-effect waves-light btn" href="cadastro.html"
-            style="background: #34a5a1; color: white; margin: 1em;"><i class="fas fa-arrow-left"></i> Voltar</a>
-    </div>
+    <div class="home" style="margin-top: 50px">
+        <div class="col m12 s12" >
+            <a class="waves-effect waves-light btn" href="cadastro.html"
+                style="background: #34a5a1; color: white; margin: 1em;"><i class="fas fa-arrow-left"></i> Voltar</a>
+        </div>
 
-    <main>
-        <div class="home">
-            <h4 class="center"> Cadastro de pessoa </h4>
-            <br>
-            <div class="row container">
+        <main>
+            <div class="home">
+                <h4 class="center"> Cadastro de pessoa </h4>
+                <br>
+                <div class="row container">
 
-                <div class="row">
-                    <form class="col s12">
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Nome</label>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col m6 s12">
+                                    <input id="last_name" type="text" class="validate">
+                                    <label for="last_name">Nome</label>
+                                </div>
+                                <div class="input-field col m6 s12">
+                                    <input id="last_name" type="text" class="validate">
+                                    <label for="last_name">Sobrenome</label>
+                                </div>
                             </div>
-                            <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Sobrenome</label>
+                            <div class="row">
+                                <div class="input-field col m6 s12">
+                                    <input id="last_name" type="text" class="validate">
+                                    <label for="last_name">E-mail</label>
+                                </div>
+                                <div class="input-field col m6 s12">
+                                    <input id="last_name" type="text" class="validate">
+                                    <label for="last_name">Telefone</label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">E-mail</label>
+                            <div class="row">
+                                <div class="input-field col m6 s12">
+                                    <input id="last_name" type="text" class="validate">
+                                    <label for="last_name">Cidade</label>
+                                </div>
+                                <div class="input-field col m6 s12">
+                                    <input id="last_name" type="text" class="validate">
+                                    <label for="last_name">Endereço</label>
+                                </div>
                             </div>
-                            <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Telefone</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Cidade</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Endereço</label>
-                            </div>
-                        </div>
 
-                        <div class="input-field col m12 s12">
-                            <p class="center"><a class="waves-effect waves-light btn green darken-3 editar" id="editar"
-                                    style="color: #fff;"><i class="fas fa-check"></i> Cadastrar </a></p>
-                        </div>
+                            <div class="input-field col m12 s12">
+                                <p class="center"><a class="waves-effect waves-light btn green darken-3 editar"
+                                        id="editar" style="color: #fff;"><i class="fas fa-check"></i> Cadastrar </a></p>
+                            </div>
 
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
+        </main>
+    </div>
 
-    </main>
-
+    
+    </div>
     <footer class="page-footer" style="background: rgba(52, 73, 94,.8);">
         <div class="container">
-            <p class="center">&copy; Adocão 2019<p>
+            <p class="center">&copy; SavePets 2019<p>
         </div>
     </footer>
 
@@ -131,10 +133,9 @@
 
 </html>
 
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="../Public/js/materialize.js"></script>
 <script src="../Public/js/init.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="../Public/js/materialize.min.js"></script>
-<script src="../Public/js/mbox-0.0.1.js"></script>
 
 
 <script>
