@@ -39,8 +39,9 @@
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down" style="margin-top: 1em;">
                     <li><a href="cadastro_funcionario.html"
-                            class="btn waves-effect waves-light deep-orange lighten-2">Funcioários</a></li>
-                    <li><a href="cadastro.html" class="btn waves-effect waves-light deep-orange lighten-2">Cadastro</a>
+                            class="btn waves-effect waves-light deep-orange lighten-2">Colaboradores</a></li>
+                    <li><a href="cadastro_animal.html"
+                            class="btn waves-effect waves-light deep-orange lighten-2">Cadastro de animais</a>
                     </li>
                     <li><a href="localiza_animal.html"
                             class="btn waves-effect waves-light deep-orange lighten-2">Localização</a></li>
@@ -49,8 +50,8 @@
 
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="cadastro_funcionario.html">Funcioários</a></li>
-                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="cadastro_funcionario.html">Colaboradores</a></li>
+                    <li><a href="cadastro_animal.html">Cadastro de animais</a></li>
                     <li><a href="localiza_animal.html">Localização</a></li>
                     <li><a href="../index.html"><i class="fas fa-sign-out-alt fa-2x"></i></a></li>
                     <li class="search">
@@ -71,56 +72,127 @@
             style="background: #34a5a1; color: white; margin: 1em;"><i class="fas fa-arrow-left"></i> Voltar</a>
     </div>
 
-    <main>
-
+    <div class="section no-pad-bot" id="index-banner">
         <div class="home">
-            <h4 class="center"> Localizar animal </h4>
-            <br>
-            <div class="row container">
-                <form class="col s12 ">
-                    <br><br>
-                    <div class="row ">
-                        <div class="input-field col m4"></div>
-                        <div class="input-field col m3 s12 ">
-                            <input id="last_name" type="number" class="validate">
-                            <label for="last_name">Código da coleira</label>
-                        </div>
-                        <div class="input-field col m1 s12">
-                            <a class="btn-floating btn-large waves-effect waves-light red user_email"><i
-                                    class="material-icons">add</i></a>
-                        </div>
-                    </div>
-
-                </form>
-            </div>
-        </div>
-        </div>
-        </main>
-
-        <footer class="page-footer" style="background: rgba(52, 73, 94,.8);">
             <div class="container">
-                <p class="center">&copy; SavePets 2019<p>
+                <h4 class="center"> Animais registrados </h4>
+                <br>
+                <table class="striped responsive-table">
+                    <thead style="background: #34a5a1;">
+                        <tr>
+                            <th class="center">Nome</th>
+                            <th class="center">Sexo</th>
+                            <th class="center">Situação</th>
+                            <th class="center">Especie</th>
+                            <th class="center">Idade</th>
+                            <th class="center">Código da coleira</th>
+                            <th class="center">Informações</th>
+                            <th class="center">Localizar</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="detalhes_lista">
+                            <td class="celula center">Scooby</td>
+                            <td class="celula center">Macho</td>
+                            <td class="celula center">Castrado</td>
+                            <td class="celula center">Cão</td>
+                            <td class="celula center">Adulto</td>
+                            <td class="celula center">00012</td>
+                            <td class="center informacao"><a href="#"
+                                    class="waves-circle btn-floating blue user_email"><i
+                                        class="fa fa-search-plus"></i></a>
+                            </td>
+                            <td class="localiza center"><a class="loca_animal waves-circle btn-floating green"><i
+                                        class="fa fa-map-marker"></i></a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
             </div>
-        </footer>
+        </div>
+    </div>
 
-        <!-- Modal Structure -->
-        <div id="modal2" class="modal modal-fixed-footer" style="margin-top: 70px;">
-            <div class="modal-content">
-                <h4 class="center title_responsivo">Localização do animal</h4>
+    <!-- Modal Structure -->
+    <div id="modal2" class="modal modal-fixed-footer" style="margin-top: 70px;">
+        <div class="modal-content">
+            <h4 class="center title_responsivo">Informações do animal</h4>
 
-                <div class="row">
-                    <iframe class="center"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30314.52623636436!2d-43.61763564946822!3d-18.24134004546895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaeb9ab8f0c38ff%3A0x20f6a7aa673dbbe1!2sDiamantina%2C+MG%2C+39100-000!5e0!3m2!1spt-PT!2sbr!4v1562285248549!5m2!1spt-PT!2sbr"
-                        width="100%" height="280" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <img class="responsive-img" src="../Public/img/dog.jpg">
+                </div>
+                <div class="input-field col s12 m6">
+                    <input value="00012" id="" type="text" disabled>
+                    <label for="">Código da coleira</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input value="Scooby" id="" type="text" disabled>
+                    <label for="">Nome</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input value="Cão" id="" type="text" disabled>
+                    <label for="">Espécie</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input value="Macho" id="" type="text" disabled>
+                    <label for="">Sexo</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input value="Marrom" id="" type="text" disabled>
+                    <label for="">Cor</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input value="Castrado" id="" type="text" disabled>
+                    <label for="">Situaçao</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input value="Filhote" id="" type="text" disabled>
+                    <label for="">Idade</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input value="12KG" id="" type="text" disabled>
+                    <label for="">Peso</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input value="Médio" id="" type="text" disabled>
+                    <label for="">Porte</label>
                 </div>
             </div>
-            <div class="modal-footer">
-                <a id="enviar_email_user" class="modal-close waves-effect waves-green btn-flat green"
-                    style="color: white;">Traçar
-                    rota</a>
-                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">cancelar</a>
+        </div>
+
+        <div class="modal-footer">
+
+            <a id="loca_animal" class=" loca_animal waves-effect waves-green btn-flat green"
+                style="color: white;">Localizar</a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">cancelar</a>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal modal-fixed-footer" style="margin-top: 70px;">
+        <div class="modal-content">
+            <h4 class="center title_responsivo">Localização do seu animal</h4>
+
+            <div class="row">
+                <iframe class="center"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30314.52623636436!2d-43.61763564946822!3d-18.24134004546895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaeb9ab8f0c38ff%3A0x20f6a7aa673dbbe1!2sDiamantina%2C+MG%2C+39100-000!5e0!3m2!1spt-PT!2sbr!4v1562285248549!5m2!1spt-PT!2sbr"
+                    width="100%" height="280" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </div>
+        <div class="modal-footer">
+            <a id="localiza" class="modal-close waves-effect waves-green btn-flat green" style="color: white;">Traçar
+                rota</a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">cancelar</a>
+        </div>
+    </div>
+
+    <footer class="page-footer" style="background: rgba(52, 73, 94,.8);">
+        <div class="container">
+            <p class="center">&copy; SavePets 2019<p>
+        </div>
+    </footer>
 </body>
 
 </html>
@@ -128,6 +200,7 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="../Public/js/materialize.js"></script>
 <script src="../Public/js/init.js"></script>
+<script src="../Public/js/mbox-0.0.1.js"></script>
 
 <script>
     $(document).ready(function () {
@@ -146,11 +219,21 @@
             $('#modal2').modal('open');
         });
 
+        $('.loca_animal').click(function (e) {
+            e.preventDefault();
+            $('#modal1').modal('open');
+        });
+
         $('#enviar_email_user').click(function (e) {
             e.preventDefault();
-            return mbox.alert('Animal localizado!');
-            location.reload("index.html");
+            return mbox.alert('E-mail enviado com sucesso!');
         });
+
+        $('#localiza').click(function (e) {
+            e.preventDefault();
+            return mbox.alert('Animal localizado com sucesso!');
+        });
+
 
     });
 </script>

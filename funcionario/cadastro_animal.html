@@ -37,8 +37,8 @@
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down" style="margin-top: 1em;">
                     <li><a href="cadastro_funcionario.html"
-                            class="btn waves-effect waves-light deep-orange lighten-2">Funcioários</a></li>
-                    <li><a href="cadastro.html" class="btn waves-effect waves-light deep-orange lighten-2">Cadastro</a>
+                            class="btn waves-effect waves-light deep-orange lighten-2">Colaboradores</a></li>
+                    <li><a href="cadastro_animal.html" class="btn waves-effect waves-light deep-orange lighten-2">Cadastro de animais</a>
                     </li>
                     <li><a href="localiza_animal.html"
                             class="btn waves-effect waves-light deep-orange lighten-2">Localização</a></li>
@@ -47,8 +47,8 @@
 
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="cadastro_funcionario.html">Funcioários</a></li>
-                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="cadastro_funcionario.html">Colaboradores</a></li>
+                    <li><a href="cadastro_animal.html">Cadastro de animais</a></li>
                     <li><a href="localiza_animal.html">Localização</a></li>
                     <li><a href="../index.html"><i class="fas fa-sign-out-alt fa-2x"></i></a></li>
                     <li class="search">
@@ -66,8 +66,8 @@
     <br>
     <main style="margin-top: 30px">
         <br>
-        <div class="col m12 s12">
-            <a class="waves-effect waves-light btn" href="cadastro.html"
+        <div class="col m12 s12" style="margin-top: 50px">
+            <a class="waves-effect waves-light btn" onclick="history.go(-1);"
                 style="background: #34a5a1; color: white; margin: 1em;"><i class="fas fa-arrow-left"></i> Voltar</a>
         </div>
 
@@ -79,62 +79,76 @@
                 <div class="row">
                     <form class="col s12">
                         <div class="row">
-                            <div class="input-field col m6 s12">
+                            <div class="input-field col m4 s12">
                                 <input id="last_name" type="text" class="validate">
                                 <label for="last_name">Nome</label>
                             </div>
-                            <div class="input-field col m6 s12">
+                            <div class="input-field col m4 s12">
                                 <input id="last_name" type="text" class="validate">
                                 <label for="last_name">Peso</label>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col m6 s12">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Espécie</label>
+                            <div class="row">
+                                <div class="input-field col m4 s12">
+                                    <select name="tipo_produto" id="tipo_produto">
+                                        <option value="0" selected>Macho</option>
+                                        <option value="1">Fémea</option>
+                                    </select>
+                                    <label>Sexo</label>
+                                </div>
                             </div>
-                            <div class="input-field col m6 s12">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Raça</label>
+                            <div class="row">
+                                <div class="input-field col m6 s12">
+                                    <select name="tipo_produto" id="tipo_produto">
+                                        <option value="0" selected>Cão</option>
+                                        <option value="1">Gato</option>
+                                    </select>
+                                    <label>Espécie</label>
+                                </div>
+                                <div class="input-field col m6 s12">
+                                    <input id="last_name" type="text" class="validate">
+                                    <label for="last_name">Raça</label>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="input-field col m4 s12">
+                                    <input id="last_name" type="text" class="validate">
+                                    <label for="last_name">Cor</label>
+                                </div>
+                                <div class="input-field col m4 s12">
+                                    <select name="tipo_produto" id="tipo_produto">
+                                        <option value="0" selected>Filhote</option>
+                                        <option value="1">Adulto</option>
+                                    </select>
+                                    <label>Idade</label>
+                                </div>
+                                <div class="input-field col m4 s12">
+                                    <input id="last_name" type="number" class="validate">
+                                    <label for="last_name">Código da coleira</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col m6 s12">
+                                    <select name="tipo_produto" id="tipo_produto">
+                                        <option value="0" selected>Não</option>
+                                        <option value="2">Sim</option>
+                                    </select>
+                                    <label>Castrado</label>
+                                </div>
+                                <div class="input-field col m6 s12">
+                                    <select name="tipo_produto" id="tipo_produto">
+                                        <option value="0" selected>Pequeno</option>
+                                        <option value="1">Medio</option>
+                                        <option value="2">Grande</option>
+                                    </select>
+                                    <label>Porte do animal</label>
+                                </div>
                             </div>
 
-                        </div>
-                        <div class="row">
-                            <div class="input-field col m4 s12">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Cor</label>
+                            <div class="input-field col m12 s12">
+                                <p class="center"><a class="waves-effect waves-light btn green darken-3 editar"
+                                        id="editar" style="color: #fff;"><i class="fas fa-check"></i> Cadastrar </a></p>
                             </div>
-                            <div class="input-field col m4 s12">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Idade</label>
-                            </div>
-                            <div class="input-field col m4 s12">
-                                <input id="last_name" type="number" class="validate">
-                                <label for="last_name">Código da coleira</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col m6 s12">
-                                <select name="tipo_produto" id="tipo_produto">
-                                    <option value="0" selected>Não</option>
-                                    <option value="2">Sim</option>
-                                </select>
-                                <label>Castrado</label>
-                            </div>
-                            <div class="input-field col m6 s12">
-                                <select name="tipo_produto" id="tipo_produto">
-                                    <option value="0" selected>Pequeno</option>
-                                    <option value="1">Medio</option>
-                                    <option value="2">Grande</option>
-                                </select>
-                                <label>Porte do animal</label>
-                            </div>
-                        </div>
-
-                        <div class="input-field col m12 s12">
-                            <p class="center"><a class="waves-effect waves-light btn green darken-3 editar" id="editar"
-                                    style="color: #fff;"><i class="fas fa-check"></i> Cadastrar </a></p>
-                        </div>
 
                     </form>
 
